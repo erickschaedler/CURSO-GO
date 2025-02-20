@@ -9,7 +9,8 @@ type Number interface {
 	~int | ~float64
 }
 
-func Compara[T Number](a T, b T) bool {
+// comparable compara somente a igualdade
+func Compara[T comparable](a T, b T) bool {
 	if a == b {
 		return true
 	}
@@ -41,5 +42,6 @@ func main() {
 
 	println(Soma(m3))
 
+	// nao sei como isto esta funcionando
 	println(Compara(10, 10.0))
 }
